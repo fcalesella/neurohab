@@ -24,7 +24,7 @@ Furthermore, it handles both block designs with one or multiple conditions and d
 Finally, it supports both the presence and absence of multiple seeds.
 
 ## 2. Installation and Data Requirements <a name="Installation"></a>
-The installation via pip is supported:
+The installation with pip is supported:
 ```
 pip install neurohab
 ```
