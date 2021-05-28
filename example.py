@@ -17,15 +17,15 @@ output_path = 'Output_directory'
 first_subject = 1
 # Define the number of the last subject
 last_subject = 106
-# If the subjects to be analyzed are not sequential, comment out the lines: 19,
-# 21, 43, and 45. Then uncomment the line 25, and manually fill the list
+# If the subjects to be analyzed are not sequential, comment out the lines: 17,
+# 19, 41, and 43. Then uncomment the line 23, and manually fill the list
 # with the the subject numbers
 # subjects = []
 
 # Define the condition to which each block/scan belongs
 conditions = [2,2,2,2,2,1,1,1,1]
 # Define the number of the seed/region of interest (ROI) to be included
-rois = [1, 2]
+rois = [1]
 # Define the number of digits that make up the subject, condition and source 
 # numbers.
 tens = 3
