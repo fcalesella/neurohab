@@ -94,14 +94,14 @@ save_images(path, images, shape, affine)
 
 ## 4. Example <a name="Example"></a>
 An example on how to run the code and estimate the habituation parameters is provided in the ```example.py``` file (it can also be used as a run-file). In this file, the following edits are required:
-- line 15: define the full path of the directory where the input files are stored
-- line 17: define the directory where the habituation maps will be saved
-- lines 19-25: the first and last subject
-- line 28: the eventual condition of each block/scan (if no condition exists, create a list of ones with the same length of the blocks/scans number)
-- line 30: the eventual seeds (if no seed exists, the list will contain only a number, matching the "Source" field in the file names)
-- line 33: the tens parameter
-- line 35: the shape of the images (see Section 5)
-- line 37: the affine matrix of the images (see Section 5)
+- line 13: define the full path of the directory where the input files are stored
+- line 15: define the directory where the habituation maps will be saved
+- lines 17-23: the first and last subject
+- line 26: the eventual condition of each block/scan (if no condition exists, create a list of ones with the same length of the blocks/scans number)
+- line 28: the eventual seeds (if no seed exists, the list will contain only a number, matching the "Source" field in the file names)
+- line 31: the tens parameter
+- line 33: the shape of the images (see Section 5)
+- line 35: the affine matrix of the images (see Section 5)
 
 In this case, 106 subjects performed a face-matching task, with shape-matching as a control condition. After preprocessing, each subject resulted with voxelwise BOLD maps in 4 face-matching blocks and 5 shape-matching blocks (i.e., each subject had 9 BOLD maps devided in 2 conditions). Consequently, at lines 19-25 106 subjects were set, at line 28 the conditions were specified for each block (i.e., shape=2; face=1), at line 30 ROIs were defined (only a 1 was inserted as we had no FC seeds), and at line 33 the tens parameter was also defined (even though its specification is optional). Here tens is 3 because we had 9 blocks, no ROI, and 106 subjects, so the maximum number is 106, which is composed by 3 digits. The shape and the affine matrix were also defined.
 
