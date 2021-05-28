@@ -19,9 +19,7 @@ Two measures of habituation were implemented, based on Plichta et al. (2014):
 - First-minus-Last (FmL)
 - Regression (REG)
 
-The code was made applicable both on blood oxygenation level dependent (BOLD) signal maps and on seed based funcitonal connectivity (FC) maps, as returned by the SPM and CONN toolboxes, respectively. However, it can be used to extract habituation parameters from every kind of NIfTI images. \
-Furthermore, it handles both block designs with one or multiple conditions and designs with no blocks nor conditions (e.g., resting state).\
-Finally, it supports both the presence and absence of multiple seeds.
+The code was run on blood oxygenation level dependent (BOLD) signal maps. Furthermore, it handles both block designs with one or multiple conditions and designs with no blocks nor conditions (e.g., resting state). Finally, also seed based funcitonal connectivity (FC) maps can be given as input.
 
 ## 2. Installation and Data Requirements <a name="Installation"></a>
 The installation with pip is supported:
@@ -105,7 +103,7 @@ An example on how to run the code and estimate the habituation parameters is pro
 - line 35: the shape of the images (see Section 5)
 - line 37: the affine matrix of the images (see Section 5)
 
-In this case, 106 subjects performed a face-matching task, with shape-matching as a control condition. After preprocessing, each subject resulted with voxelwise BOLD maps in 4 face-matching blocks and 5 shape-matching blocks (i.e., each subject had 9 BOLD maps devided in 2 conditions). Seed based connectivity was also performed with two seeds. Consequently, at lines 19-25 106 subjects were set, at line 28 the conditions were specified for each block (i.e., shape=2; face=1), at line 30 ROIs were defined (only when connectivity maps were used, otherwise only a 1 was inserted), and at line 33 the tens parameter was also defined (even though its specification is optional). Here tens is 3 because we had 9 blocks, 2 rois, and 106 subjects, so the maximum number is 106, which is composed by 3 digits. The shape and the affine matrix were also defined.
+In this case, 106 subjects performed a face-matching task, with shape-matching as a control condition. After preprocessing, each subject resulted with voxelwise BOLD maps in 4 face-matching blocks and 5 shape-matching blocks (i.e., each subject had 9 BOLD maps devided in 2 conditions). Consequently, at lines 19-25 106 subjects were set, at line 28 the conditions were specified for each block (i.e., shape=2; face=1), at line 30 ROIs were defined (only a 1 was inserted as we had no FC seeds), and at line 33 the tens parameter was also defined (even though its specification is optional). Here tens is 3 because we had 9 blocks, no ROI, and 106 subjects, so the maximum number is 106, which is composed by 3 digits. The shape and the affine matrix were also defined.
 
 ## 5. Notes: shape and affine matrix <a name="Notes"></a>
 In order to assess the shape of the array containing the images and the affine matrx, the NiBabel package can be used. Please refer to the [NiBabel page](https://nipy.org/nibabel/) and its [Getting Started page](https://nipy.org/nibabel/gettingstarted.html). Here an example is provided to assess these parameters with NiBabel. To import the package and load an image, just edit the input string at the second line with a valid full path to a NIfTI image.
