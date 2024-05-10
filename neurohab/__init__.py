@@ -6,4 +6,4 @@ Created on Mon May 17 17:29:32 2021
          Psychiatry and Clinical Psychobiology Unit, Division of Neuroscience, 
          IRCCS San Raffaele Scientific Institute, Milan, Italy
 """
-from neurohab import BrainHabituation
+from .neurohab import BrainHabituation

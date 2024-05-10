@@ -181,7 +181,10 @@ class BrainHabituation():
         for voxel in range(nvoxel):
             x = a[:, voxel]
             y = b[:, voxel]
-            c[voxel], _, _, _, _ = stats.linregress(x, y)
+            if len(np.unique(x)) == 1:
+                c[voxel] = np.nan
+            else:
+                c[voxel], _, _, _, _ = stats.linregress(x, y)
             
         return c
     
