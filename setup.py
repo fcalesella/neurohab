@@ -13,7 +13,7 @@ def readme():
         return f.read()
     
 setup(name='neurohab',
-version='0.0.1',
+version='0.0.2',
 description='Voxelwise brain habituation',
 long_description=readme(),
 long_description_content_type='text/markdown',
